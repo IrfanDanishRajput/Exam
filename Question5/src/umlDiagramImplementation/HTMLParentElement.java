@@ -14,8 +14,8 @@ public class HTMLParentElement extends HTMLTag{
 	@Override
 	public void generateHtml() {
 		System.out.println(startTag);
-		for (HTMLTag htmlTag : super.getChildern()) {
-			htmlTag.generateHtml();
+		for (HTMLTag ht : super.getChildern()) {
+			ht.generateHtml();
 		}
 		System.out.println(endTag);
 	}
@@ -25,12 +25,22 @@ public class HTMLParentElement extends HTMLTag{
 		this.tagName = tagName;
 	}
 	
+	
+	
+	
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void setStartTag(String startTag) {
 		this.startTag  = startTag;
 		
 	}
-
+	
+	
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getTagName() {
 		return tagName;
